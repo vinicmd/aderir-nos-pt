@@ -1,4 +1,6 @@
 import styles from "@/components/footer/footer.module.css";
+import { CONSTANTS } from "@/util/constants";
+import { formatTelephone } from "@/util/format-telephone";
 import Link from "next/link";
 export const Footer = () => {
   const showFooter = true;
@@ -26,23 +28,29 @@ export const Footer = () => {
             <div className={styles.contact}>
               <h2>Contacto</h2>
               <div className={styles.number}>
-                <Link href="tel:+351937787520" className={styles.contactNumber}>
-                  (+351) 935 884 616
+                <Link
+                  href={`tel:${CONSTANTS.telephone}`}
+                  className={styles.contactNumber}
+                >
+                  {formatTelephone(CONSTANTS.telephone)}
                 </Link>
               </div>
               <div className={styles.email}>
                 <Link
-                  href="mailto:pacotesinternetfibra@gmail.com"
+                  href={`mailto:${CONSTANTS.email}`}
                   className={styles.contactEmail}
                 >
-                  pacotesinternetfibra@gmail.com
+                  {CONSTANTS.email}
                 </Link>
               </div>
             </div>
           </div>
         )}
         <div className={styles.policy}>
-          <p>&copy; 2024 Aderir Pacotes | Todos os direitos reservados</p>
+          <p>
+            &copy; {CONSTANTS.year} Aderir Pacotes | Todos os direitos
+            reservados
+          </p>
           <Link href="/sobre-nos">Sobre Nós</Link>
           <div>
             <Link href="/politica-de-privacidade">Politica de Privacidade</Link>
