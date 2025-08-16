@@ -1,4 +1,3 @@
-import { url } from '@/app/layout';
 
 export const telegramURIFormater = ({
   name,
@@ -7,6 +6,7 @@ export const telegramURIFormater = ({
   const chatID = process.env.NEXT_PUBLIC_CHAT_ID;
   const telegramToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
 
+  const url = 'asdjaslj'
   const message = encodeURIComponent(
     `<b>Novo Cliente</b>\nOrigen: ${url}\n\n<b>Nome:</b> ${name}\n<b>Telemóvel:</b> ${telephone}`
   );
