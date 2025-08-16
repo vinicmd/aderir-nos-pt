@@ -12,13 +12,14 @@ export const Header = ({ isComplete = true }) => {
   async function handleForm(formData: FormData) {
     redirect("/obrigado");
   }
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.title}>
           <Link href="/">
             <Image
-              src="/assets/logo.svg"
+              src={`${showNOSName ? '/assets/logo.svg' : '/assets/logo.png'}`}
               className={styles.logo}
               alt="Logo"
               width={185}
