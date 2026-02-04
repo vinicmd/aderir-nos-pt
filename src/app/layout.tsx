@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import { showNOSName } from '@/util/showNOSName';
+import { showNOSName } from "@/util/showNOSName";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
-const description =
-  `Aderir Pacotes de Internet ${showNOSName ? "N​O​S " : ''} - TV Net Voz - ao melhor preço. Na adesão a qualquer pacote de internet ${showNOSName ? "N​O​S " : ''} escolha a oferta da TV ou Telemóvel ou Tablet. Instalação em 24h/48h.`;
-const title = `Aderir Internet ${showNOSName ? "N​O​S " : ''}`;
+const description = `Aderir Pacotes de Internet ${showNOSName ? "N​O​S " : ""} - TV Net Voz - ao melhor preço. Na adesão a qualquer pacote de internet ${showNOSName ? "N​O​S " : ""} escolha a oferta da TV ou Telemóvel ou Tablet. Instalação em 24h/48h.`;
+const title = `Aderir Internet ${showNOSName ? "N​O​S " : ""}`;
 const url = "https://aderirnos.pt";
 
 export const metadata: Metadata = {
@@ -48,6 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
+      <GoogleAnalytics gaId="AW-11027087416" />
       <body className={`${roboto.className}`}>{children}</body>
     </html>
   );
