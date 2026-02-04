@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import styles from "./header.module.css";
-import { PriceBox } from "../price-box/price-box";
 import { showNOSName } from "@/util/showNOSName";
 import { FormHeader } from "../formHeader/formHeader";
 import { CONSTANTS } from "@/util/constants";
@@ -19,7 +18,7 @@ export const Header = ({ isComplete = true }) => {
         <div className={styles.title}>
           <Link href="/">
             <Image
-              src={`${showNOSName ? '/assets/logo.svg' : '/assets/logo.png'}`}
+              src={`${showNOSName ? "/assets/logo.svg" : "/assets/logo.png"}`}
               className={styles.logo}
               alt="Logo"
               width={185}
